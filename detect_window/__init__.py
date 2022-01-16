@@ -1,6 +1,7 @@
 from otree.api import *
 
-doc = """Detect and block mobile browsers & measure the window inner size (modified by Seura)"""
+doc = """Detect and block mobile browsers (original source: https://www.otreehub.com/projects/otree-snippets/ by Chris @ oTree
+        & measure the window inner size (modified by Linfeng & Seura @ UMBEE)"""
 
 
 class C(BaseConstants):
