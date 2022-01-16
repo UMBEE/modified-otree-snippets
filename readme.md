@@ -14,7 +14,9 @@ For detailed notes on the modified apps, please read along
 ----
 
 ## Detect user-agent and window dimension
-The `detect_window/` folder contains an application adopted from [the
+The
+[`detect_window/`](https://github.com/UMBEE/modified-otree-snippets/tree/master/detect_window)
+folder contains an application adopted from [the
 `otree-snippets` project on
 oTreeHub](https://www.otreehub.com/projects/otree-snippets/). Specifically, the
 original application is named as `detect_mobile/` in the original
