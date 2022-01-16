@@ -11,11 +11,11 @@ SESSION_CONFIG_DEFAULTS = dict(
 
 SESSION_CONFIGS = [
     dict(
-        name='detect_mobile',
-        display_name='Block mobile browsers',
+        name='detect_window',
+        display_name='Detect and track window dimension for browser client',
         num_demo_participants=1,
         # Note, from otree-snippets, the source app is called: detect_mobile
-        app_sequence=['monitor_dimension_and_UserAgent'],
+        app_sequence=['detect_window'],
     ),
         ]
 # SESSION_CONFIGS = [
