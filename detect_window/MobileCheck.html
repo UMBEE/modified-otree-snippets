@@ -1,0 +1,45 @@
+{{ block title }}
+Start
+{{ endblock }}
+{{ block content }}
+
+<input type="hidden" name="is_mobile" id="is_mobile">
+<input type="hidden" name="window_width" id="window_width">
+<input type="hidden" name="window_height" id="window_height">
+
+<p>Please click next.</p>
+
+{{ next_button }}
+
+<script>
+    function isMobile() {
+        const toMatch = [
+            /Android/i,
+            /iPhone/i,
+            /iPad/i,
+        ];
+
+        return toMatch.some((toMatchItem) => {
+            return navigator.userAgent.match(toMatchItem);
+        });
+    }
+
+    function WindowSizeW() {
+        return window.innerWidth;
+    }
+    function WindowSizeH() {
+        return window.innerHeight;
+    }
+
+    // here is an alternative technique that checks screen resolution
+    // function isMobile() {
+    //     return ((window.innerWidth <= 800) && (window.innerHeight <= 600));
+    // }
+
+    document.getElementById('is_mobile').value = isMobile() ? 1 : 0;
+    document.getElementById('window_width').value = WindowSizeW();
+    document.getElementById('window_height').value = WindowSizeH();
+
+</script>
+
+{{ endblock }}
