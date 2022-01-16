@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY st0 "fill:#FFFFFF;stroke:#000000;stroke-width:3;stroke-miterlimit:10;">
+	<!ENTITY st1 "fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;">
+	<!ENTITY st2 "fill:none;stroke:#000000;stroke-miterlimit:10;">
+	<!ENTITY st3 "fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;">
+	<!ENTITY st4 "stroke:#000000;stroke-width:2;stroke-miterlimit:10;">
+]>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 120 120" style="enable-background:new 0 0 120 120;" xml:space="preserve">
+<g id="Mouth">
+	<path style="&st0;" d="M85.5,79.5"/>
+	<path style="&st1;" d="M79.5,80.5c0,0-20-13-46,1"/>
+</g>
+<g id="Head">
+	<ellipse style="&st1;" cx="59" cy="58.5" rx="53.5" ry="52"/>
+	<path style="&st2;" d="M34.5,27.5"/>
+</g>
+<g id="Eyebrows">
+	<path style="&st3;" d="M55,22.9"/>
+	<path style="&st3;" d="M35,37c0,0,13-14,20-9"/>
+	<path style="&st3;" d="M67,28c5-5,19,11,19,11"/>
+</g>
+<g id="Eyes">
+	<ellipse style="&st3;" cx="48" cy="44.5" rx="9" ry="9.5"/>
+	<ellipse style="&st3;" cx="70" cy="44.5" rx="9" ry="9.5"/>
+	<circle style="&st4;" cx="49.5" cy="44.5" r="3.5"/>
+	<circle style="&st4;" cx="69.5" cy="44.5" r="3.5"/>
+</g>
+<g id="Nose">
+	<path style="&st4;" d="M9,109"/>
+	<path style="&st3;" d="M73,65c0,0-11.8,4.7-21,0"/>
+</g>
+</svg>
