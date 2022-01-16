@@ -1,4 +1,17 @@
 # Intro
+This repo contains modified apps from the [`otree-snippets`
+project](https://www.otreehub.com/projects/otree-snippets/) on oTree Hub.
+
+The list of modified apps includes:
+* `detect_window`, for detecting user-agent and window dimension of the client's
+  browser.
+  
+  
+-----
+
+For detailed notes on the modified apps, please read along
+
+----
 
 ## Detect user-agent and window dimension
 The `detect_window/` folder contains an application adopted from [the
