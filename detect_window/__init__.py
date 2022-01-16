@@ -21,12 +21,13 @@ class Player(BasePlayer):
     is_mobile = models.BooleanField()
     window_width = models.IntegerField()
     window_height = models.IntegerField()
+    user_agent_str = models.StringField()
 
 
 # PAGES
 class MobileCheck(Page):
     form_model = 'player'
-    form_fields = ['is_mobile', 'window_width', 'window_height']
+    form_fields = ['is_mobile', 'window_width', 'window_height', 'user_agent_str']
 
     def error_message(player: Player, values):
         if values['is_mobile']:

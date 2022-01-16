@@ -6,6 +6,7 @@ Start
 <input type="hidden" name="is_mobile" id="is_mobile">
 <input type="hidden" name="window_width" id="window_width">
 <input type="hidden" name="window_height" id="window_height">
+<input type="hidden" name="user_agent_str" id="user_agent_str">
 
 <p>Please click next.</p>
 
@@ -30,6 +31,9 @@ Start
     function WindowSizeH() {
         return window.innerHeight;
     }
+    function UserAgent_raw_str() {
+        return navigator.userAgent
+    }
 
     // here is an alternative technique that checks screen resolution
     // function isMobile() {
@@ -39,6 +43,7 @@ Start
     document.getElementById('is_mobile').value = isMobile() ? 1 : 0;
     document.getElementById('window_width').value = WindowSizeW();
     document.getElementById('window_height').value = WindowSizeH();
+    document.getElementById('user_agent_str').value = UserAgent_raw_str();
 
 </script>
 
