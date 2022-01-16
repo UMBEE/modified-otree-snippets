@@ -1,6 +1,11 @@
 # Intro
 
 ## Detect user-agent and window dimension
+The `detect_window/` folder contains an application adopted from [the
+`otree-snippets` project on
+oTreeHub](https://www.otreehub.com/projects/otree-snippets/). Specifically, the
+original application is named as `detect_mobile/` in the original
+`otree-snippets` project.
 
 ### What's new
 The following model fields are added for export:
