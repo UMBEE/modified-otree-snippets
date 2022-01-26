@@ -1,0 +1,41 @@
+{{ block content }}
+
+<p>Choose what investment to make at an APR of {{ C.APR }}</p>
+The fields below are populated by raw oTree forms. Ideally, we'd like to track
+the sequence of attempts one makes before submitting.
+
+One useful generalization of this logging method is to inject the intermediate
+choices before one settles in a risk-elicitation choice-list experiment. 
+
+{{ formfields }}
+<br>
+<p>Your investment will be worth:</p>
+<h2><span id="projection"></span> <small>points</small></h2>
+
+{{ next_button }}
+
+<script>
+    let amountInput = document.getElementsByName('amount')[0];
+    let numYearsInput = document.getElementsByName('num_years')[0];
+    let projectionEle = document.getElementById('projection');
+
+    function recalc() {
+        let amount = parseFloat(amountInput.value);
+        let numYears = parseInt(numYearsInput.value);
+
+        // isNaN is the javascript function that checks whether the value is a valid
+        // number. need to check this because the field might be empty or
+        // the user might have typed something other than a number.
+        if (isNaN(amount) || isNaN(numYears)) {
+            projectionEle.innerText = '';
+        } else {
+            let projection = amount * Math.pow((1 + js_vars.APR), numYears);
+            projectionEle.innerText = Math.round(projection);
+        }
+    }
+
+    amountInput.oninput = recalc;
+    numYearsInput.oninput = recalc;
+</script>
+
+{{ endblock }}

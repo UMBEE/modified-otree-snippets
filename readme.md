@@ -34,3 +34,20 @@ The following model fields are added for export:
 ### Warning
 This snippet is constructed as a proof-of-concept. Pull requests are welcomed to
 make it ready for production.
+
+
+## What-if calculator
+The
+[`what_if_calculator/`](https://github.com/UMBEE/modified-otree-snippets/tree/master/what_if_calculator)
+folder contains an application adopted from [the
+`otree-snippets` project on
+oTreeHub](https://www.otreehub.com/projects/otree-snippets/). Specifically, the
+original application is named as `input_calculation/` in the original
+`otree-snippets` project.
+
+The naming convension is adopted from zTree, where a fully-fledged "What if"
+calculator has been known for decades.
+
+### What's new?
+The main improvement is to keep track of all attempts in an easy-to-export
+format.

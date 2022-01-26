@@ -17,6 +17,13 @@ SESSION_CONFIGS = [
         # Note, from otree-snippets, the source app is called: detect_mobile
         app_sequence=['detect_window'],
     ),
+    dict(
+        name='what_if_calc',
+        display_name='Calculate payoff using JavaScript',
+        num_demo_participants=1,
+        # Note, from otree-snippets, the source app is called: detect_mobile
+        app_sequence=['what_if_calculator'],
+    ),
         ]
 # SESSION_CONFIGS = [
 #     dict(
