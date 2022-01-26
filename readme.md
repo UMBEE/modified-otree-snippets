@@ -43,7 +43,9 @@ folder contains an application adopted from [the
 `otree-snippets` project on
 oTreeHub](https://www.otreehub.com/projects/otree-snippets/). Specifically, the
 original application is named as `input_calculation/` in the original
-`otree-snippets` project.
+`otree-snippets` project. Another important reference is the `stroop/` app from
+[the `otree-more-demos` project on
+oTreeHub](https://www.otreehub.com/projects/otree-more-demos/).
 
 The naming convension is adopted from zTree, where a fully-fledged "What if"
 calculator has been known for decades.
@@ -51,3 +53,9 @@ calculator has been known for decades.
 ### What's new?
 The main improvement is to keep track of all attempts in an easy-to-export
 format.
+* Using the syntax from the `stroop/` app from [the `otree-more-demos` project
+  on oTreeHub](https://www.otreehub.com/projects/otree-more-demos/), the
+  computation for profit is done in Python on the server.
+* Using the syntax from the original `input_calculation/` app, we replaced the
+  `amount` and `NumYears` variables to be `price` and `quantity`.
+

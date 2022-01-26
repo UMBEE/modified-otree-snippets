@@ -1,0 +1,87 @@
+{{ block content }}
+
+<style type="text/css" media="screen">
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+</style>
+
+<p>Choose what investment to make at an APR of {{ C.APR }}</p>
+
+In this experiment, you are a seller and you have two choices to make:
+<ol>
+    <li> <b>q</b> - What quantity to produce, and</li>
+    <li> <b>p</b> - What price to set</li>
+</ol>
+Nature chooses between a high-demand situation and a low-demand situation, with
+equal probability.
+
+
+To assist your decision, you are allowed to use the following calculator to
+calculate your potential profit in each environment:
+
+
+
+<span style="margin:auto; display:table; border:1px solid red;">
+What-if calculator:
+<table>
+    <tr>
+        <th>High demand profit</th>
+        <th>Low demand profit</th>
+    </tr>
+    <tr>
+        <th>
+            <h2><span id="high_value"></span> <small>points</small></h2>
+        </th>
+        <th>
+            <h2><span id="low_value"></span> <small>points</small></h2>
+        </th>
+    </tr>
+</table>
+</span>
+
+<b>Now, please make your decision:</b>
+
+
+{{ formfields }}
+
+
+{{ next_button }}
+
+<script>
+    // For model fields that are among the input, use [0] for slicing.
+    let quantityInput = document.getElementsByName('quantity')[0];
+    let priceInput = document.getElementsByName('price')[0];
+
+
+    // Note, for fetching elements for display-only, no need to slice with [0]
+    let projectionEle = document.getElementById('projection');
+    let highdemand_Profit = document.getElementById('high_value');
+    let lowdemand_Profit = document.getElementById('low_value');
+
+    function recalc() {
+        let quantity = parseInt(quantityInput.value);
+        let price = parseFloat(priceInput.value);
+
+        // isNaN is the javascript function that checks whether the value is a valid
+        // number. need to check this because the field might be empty or
+        // the user might have typed something other than a number.
+        if (isNaN(price) || isNaN(quantity)) {
+            highdemand_Profit.innerText = '';
+            lowdemand_Profit.innerText = '';
+        } else {
+            let high_profit = 100
+            let low_profit = 50
+            highdemand_Profit.innerText = Math.round(high_profit);
+            lowdemand_Profit.innerText = Math.round(low_profit);
+        }
+
+    }
+
+    quantityInput.oninput = recalc;
+    priceInput.oninput = recalc;
+</script>
+
+{{ endblock }}
