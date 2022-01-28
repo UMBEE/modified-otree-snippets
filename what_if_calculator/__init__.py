@@ -78,9 +78,15 @@ class Player(BasePlayer):
     @staticmethod
     def calc_player_profit(player): 
         if player.check_if_high_demand_status(player):
-            amount_sold = EXP_DemandFunction.high_demand(player.price)
+            amount_sold = min(
+                    player.quantity, # Amount subject chose as quantity
+                    EXP_DemandFunction.high_demand(player.price) # Demand amount
+                    ) 
         else:
-            amount_sold = EXP_DemandFunction.low_demand(player.price)
+            amount_sold = min(
+                    player.quantity, 
+                    EXP_DemandFunction.low_demand(player.price)
+                    )
 
         player.profit = calculate_profit(
                 price = player.price,
@@ -90,7 +96,10 @@ class Player(BasePlayer):
 
 
     def calc_high_demand_profit(player):
-        amount_sold = EXP_DemandFunction.high_demand(player.price)
+        amount_sold = min(
+                player.quantity, # Amount subject chose as quantity
+                EXP_DemandFunction.high_demand(player.price) # Demand amount
+                ) 
         print(dict(
                 price = player.price,
                 cost = C.COST_PER_UNIT,
@@ -105,7 +114,10 @@ class Player(BasePlayer):
 
 
     def calc_low_demand_profit(player):
-        amount_sold = EXP_DemandFunction.low_demand(player.price)
+        amount_sold = min(
+                player.quantity, 
+                EXP_DemandFunction.low_demand(player.price)
+                )
         print(dict(
                 price = player.price,
                 cost = C.COST_PER_UNIT,
@@ -154,9 +166,13 @@ class MyPage(Page):
 
     @staticmethod
     def vars_for_template(player):
-        return {
-                'cost_per_unit' : C.COST_PER_UNIT
-                }
+        return dict(
+                cost_per_unit =  C.COST_PER_UNIT,
+                HIGH_DEMAND_MAX = 100,
+                HIGH_DEMAND_PRICE_COEF = -1,
+                LOW_DEMAND_MAX  = 50,
+                LOW_DEMAND_PRICE_COEF = -2,
+                )
 
 
 

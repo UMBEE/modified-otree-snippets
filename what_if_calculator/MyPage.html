@@ -48,6 +48,15 @@ What-if calculator:
 {{ formfield player.price }}
 
 
+For references, here are the demand functions:
+
+<ul>
+    <li>High demand = {{ HIGH_DEMAND_MAX }} + {{ HIGH_DEMAND_PRICE_COEF }} * price </li>
+    <li>Low demand = {{ LOW_DEMAND_MAX }} + {{ LOW_DEMAND_PRICE_COEF }} * price </li>
+</ul>
+
+
+
 {{ next_button }}
 
 <script>
