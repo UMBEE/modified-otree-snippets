@@ -8,7 +8,7 @@ td, th {
 }
 </style>
 
-<p>Choose what investment to make at an APR of {{ C.APR }}</p>
+
 
 In this experiment, you are a seller and you have two choices to make:
 <ol>
@@ -45,7 +45,8 @@ What-if calculator:
 <b>Now, please make your decision:</b>
 
 
-{{ formfields }}
+{{ formfield player.quantity }}
+{{ formfield player.price }}
 
 
 {{ next_button }}
@@ -68,20 +69,41 @@ What-if calculator:
         // isNaN is the javascript function that checks whether the value is a valid
         // number. need to check this because the field might be empty or
         // the user might have typed something other than a number.
+
+        // Note, we used a simple triggering condition here to update the calculator result. There are two cases where the profit will adjust:
+            // For the first time, when two cells are both populated, the profit will update;
+            // Subsequently, should one cell change its value, the profit will update as well.
+        // Alternatively, we can replace the if/else to be a triggering event where a specific button is pressed.
         if (isNaN(price) || isNaN(quantity)) {
             highdemand_Profit.innerText = '';
             lowdemand_Profit.innerText = '';
         } else {
-            let high_profit = 100
-            let low_profit = 50
-            highdemand_Profit.innerText = Math.round(high_profit);
-            lowdemand_Profit.innerText = Math.round(low_profit);
+            // Update the profit
+            // let high_profit = 100
+            // let low_profit = 50
+            // highdemand_Profit.innerText = Math.round(high_profit);
+            // lowdemand_Profit.innerText = Math.round(low_profit);
+            // Send choices back to server
+            liveSend({
+                price_set: price,
+                quantity_set: quantity,
+                // set_timestamp: Date.now(), logging for server time
+            })
         }
 
     }
 
     quantityInput.oninput = recalc;
     priceInput.oninput = recalc;
+
+    // Lastly, fetch the calculated profits computed on the server
+    function liveRecv(data) {
+            // Update the profit
+            console.log('received a message!', data);
+            // your code goes here
+            highdemand_Profit.innerText = data['high_demand_profit']
+            lowdemand_Profit.innerText = data['low_demand_profit']
+        }
 </script>
 
 {{ endblock }}

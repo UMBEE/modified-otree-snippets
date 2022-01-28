@@ -1,21 +1,30 @@
 from otree.api import *
+import time
+
+import random
 
 
 doc = """
-Your app description
+This is a demo of a calculator, used in a pricing experiment. Subjects are to
+face a high or low demand with equal chance. The calculator computes the profit
+for each case.
 """
 
 
 class EXP_DemandFunction:
-    high_demand_max = 100
-    high_demand_price_coef = -1
-    low_demand_max  = 100
-    low_demand_price_coef = -2
     def high_demand(price):
-        return high_demand_max + high_demand_price_coef * price
+        quantity_sold =  C.HIGH_DEMAND_MAX + C.HIGH_DEMAND_PRICE_COEF * price
+        if quantity_sold < 0:
+            return 0
+        else:
+            return quantity_sold
 
     def low_demand(price):
-        return low_demand_max + low_demand_price_coef * price
+        quantity_sold = C.LOW_DEMAND_MAX + C.LOW_DEMAND_PRICE_COEF * price
+        if quantity_sold < 0:
+            return 0
+        else:
+            return quantity_sold
 
 
 
@@ -24,74 +33,137 @@ class C(BaseConstants):
     NAME_IN_URL = 'input_calculation'
     PLAYERS_PER_GROUP = None
     NUM_ROUNDS = 1
-    APR = 0.07
+    # Parameters of the dumb demand function
+    HIGH_DEMAND_MAX = 100
+    HIGH_DEMAND_PRICE_COEF = -1
+    LOW_DEMAND_MAX  = 100
+    LOW_DEMAND_PRICE_COEF = -2
+
+    COST_PER_UNIT = 5
+    
 
 
 class Subsession(BaseSubsession):
     pass
 
+def creating_session(subsession: Subsession):
+    for p in subsession.get_players():
+        p.calculator_log = ""
+
+
 
 class Group(BaseGroup):
     pass
 
+def calculate_profit(price, cost, units_sold):
+    return units_sold * (price - cost)
 
 class Player(BasePlayer):
+    # Note, these are all vars that are round-specific
+    # These model fields will be logged, for each round of the app.
     quantity = models.IntegerField(min=0)
     price = models.FloatField(min=0)
+    profit = models.FloatField(min=0)
+    high_demand_status = models.BooleanField()
+    calculator_log = models.StringField()
 
-    amount = models.CurrencyField(min=0, max=100000)
-    num_years = models.IntegerField(min=1, max=50)
+    def random_init_instance():
+        return random.Random(player.participant.label)
+    def check_if_high_demand_status():
+        player_specific_random_instance = player.random_init_instance()
+        # Then, make use of the random instance to decide on the status of demand
+        high_demand_status = player_specific_random_instance.randint(0, 1)   
+        return high_demand_status == 1
+
+    @staticmethod
+    def calc_player_profit(player): 
+        if player.check_if_high_demand_status(player):
+            amount_sold = EXP_DemandFunction.high_demand(player.price)
+        else:
+            amount_sold = EXP_DemandFunction.low_demand(player.price)
+
+        player.profit = calculate_profit(
+                price = player.price,
+                cost = C.COST_PER_UNIT,
+                units_sold = amount_sold
+                )
+
+
+    def calc_high_demand_profit(player):
+        amount_sold = EXP_DemandFunction.high_demand(player.price)
+        return calculate_profit(
+                price = player.price,
+                cost = C.COST_PER_UNIT,
+                units_sold = amount_sold
+                )
+
+
+    def calc_low_demand_profit(player):
+        amount_sold = EXP_DemandFunction.low_demand(player.price)
+        return calculate_profit(
+                price = player.price,
+                cost = C.COST_PER_UNIT,
+                units_sold = amount_sold
+                )
+
+        
+
+    @staticmethod
+    def log_player_attempt(player):
+        player.calculator_log += f"p={player.price},q={player.quantity},t={time.time()};"
+        print("Log added")
+
+
 
 
 # PAGES
 class MyPage(Page):
     form_model = 'player'
-    form_fields = ['quantity', 'price', ]
+    form_fields = ['quantity', 'price']
 
     @staticmethod
-    def js_vars(player: Player):
-        return dict(APR=C.APR)
+    def before_next_page(player):
+        # Label the clicktime
+        player.calc_player_profit(player)
+
+    @staticmethod
+    def live_method(player,data):
+        # Upon receiving the data, do the following
+        player.price = data['price_set']
+        player.quantity = data['quantity_set']
+        player.log_player_attempt(player)
+        return {player.id_in_group:
+                {
+                'high_demand_profit': player.calc_high_demand_profit(),
+                'low_demand_profit': player.calc_low_demand_profit()
+                }
+                }
+        
 
 
-class PQDecision(ExtraModel):
-    player = models.Link(Player)
-    image_id = models.IntegerField()
-    decoy_text = models.StringField()
-    color = models.StringField()
-    is_correct = models.BooleanField()
-    is_congruent = models.BooleanField()
-    reaction_ms = models.IntegerField()
+
+
 
 def live_method(player: Player, data):
     # Do the calculation using native Python function
+    # Restricted by the Javascript conditions, we 
+    # if data:
+    #     if is_finished(player):
+    #         return
 
-    if data:
-        if is_finished(player):
-            return
-        trial = get_current_trial(player)
+    # if is_finished(player):
+    #     return {player.id_in_group: dict(is_finished=True)}
 
-        displayed_timestamp = data['displayed_timestamp']
-        answered_timestamp = data['answered_timestamp']
-        trial.submission = data['submission']
 
-        trial.is_correct = trial.submission == trial.color
-        trial.reaction_ms = answered_timestamp - displayed_timestamp
 
-        if trial.is_correct:
-            player.num_correct += 1
-            feedback = '✓'
-        else:
-            feedback = '✗'
-        player.num_completed += 1
-
-    else:
-        feedback = ''
-
-    if is_finished(player):
-        return {player.id_in_group: dict(is_finished=True)}
-
-    payload = dict(feedback=feedback, image_id=get_current_trial(player).image_id)
-    return {player.id_in_group: payload}
+    print("triggering the live_method")
+    return {
+            player.id_in_group:  "something back"
+            # {
+            #     'high_demand_profit': 100,
+            #     'low_demand_profit': 50
+            #     }
+            }
 
 
 
