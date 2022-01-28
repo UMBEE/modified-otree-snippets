@@ -1,3 +1,5 @@
+[Demo](https://modified-otree-snippets.herokuapp.com/demo)
+
 # Intro
 This repo contains modified apps from the [`otree-snippets`
 project](https://www.otreehub.com/projects/otree-snippets/) on oTree Hub.
