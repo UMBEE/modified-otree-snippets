@@ -36,7 +36,7 @@ class C(BaseConstants):
     # Parameters of the dumb demand function
     HIGH_DEMAND_MAX = 100
     HIGH_DEMAND_PRICE_COEF = -1
-    LOW_DEMAND_MAX  = 100
+    LOW_DEMAND_MAX  = 50
     LOW_DEMAND_PRICE_COEF = -2
 
     COST_PER_UNIT = 5
@@ -91,6 +91,12 @@ class Player(BasePlayer):
 
     def calc_high_demand_profit(player):
         amount_sold = EXP_DemandFunction.high_demand(player.price)
+        print(dict(
+                price = player.price,
+                cost = C.COST_PER_UNIT,
+                units_sold = amount_sold
+            )
+            )
         return calculate_profit(
                 price = player.price,
                 cost = C.COST_PER_UNIT,
@@ -100,6 +106,12 @@ class Player(BasePlayer):
 
     def calc_low_demand_profit(player):
         amount_sold = EXP_DemandFunction.low_demand(player.price)
+        print(dict(
+                price = player.price,
+                cost = C.COST_PER_UNIT,
+                units_sold = amount_sold
+            )
+            )
         return calculate_profit(
                 price = player.price,
                 cost = C.COST_PER_UNIT,
@@ -140,6 +152,11 @@ class MyPage(Page):
                 }
         
 
+    @staticmethod
+    def vars_for_template(player):
+        return {
+                'cost_per_unit' : C.COST_PER_UNIT
+                }
 
 
 
