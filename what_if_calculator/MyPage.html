@@ -48,16 +48,21 @@ What-if calculator:
 {{ formfield player.price }}
 
 
-For references, here are the demand functions:
+For references, here are the demand functions. For tractability, we choose a linear form.
 
 <ul>
     <li>High demand = {{ HIGH_DEMAND_MAX }} + {{ HIGH_DEMAND_PRICE_COEF }} * price </li>
     <li>Low demand = {{ LOW_DEMAND_MAX }} + {{ LOW_DEMAND_PRICE_COEF }} * price </li>
 </ul>
 
+The profit above is calculated as: 
+<center>
+min(quantity, demand) * price - quantity * cost.
+</center>
 
 
-{{ next_button }}
+<!-- Hiding the next button. This demo only has one page. -->
+<!-- {{ next_button }} -->
 
 <script>
     // For model fields that are among the input, use [0] for slicing.

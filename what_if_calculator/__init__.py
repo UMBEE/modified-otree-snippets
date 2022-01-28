@@ -55,8 +55,8 @@ def creating_session(subsession: Subsession):
 class Group(BaseGroup):
     pass
 
-def calculate_profit(price, cost, units_sold):
-    return units_sold * (price - cost)
+def calculate_profit(price, cost, units_sold, units_produced):
+    return units_sold * price - cost * units_produced
 
 class Player(BasePlayer):
     # Note, these are all vars that are round-specific
@@ -91,7 +91,8 @@ class Player(BasePlayer):
         player.profit = calculate_profit(
                 price = player.price,
                 cost = C.COST_PER_UNIT,
-                units_sold = amount_sold
+                units_sold = amount_sold,
+                units_produced = player.quantity,
                 )
 
 
@@ -103,13 +104,15 @@ class Player(BasePlayer):
         print(dict(
                 price = player.price,
                 cost = C.COST_PER_UNIT,
-                units_sold = amount_sold
+                units_sold = amount_sold,
+                units_produced = player.quantity,
             )
             )
         return calculate_profit(
                 price = player.price,
                 cost = C.COST_PER_UNIT,
-                units_sold = amount_sold
+                units_sold = amount_sold,
+                units_produced = player.quantity,
                 )
 
 
@@ -121,13 +124,15 @@ class Player(BasePlayer):
         print(dict(
                 price = player.price,
                 cost = C.COST_PER_UNIT,
-                units_sold = amount_sold
+                units_sold = amount_sold,
+                units_produced = player.quantity,
             )
             )
         return calculate_profit(
                 price = player.price,
                 cost = C.COST_PER_UNIT,
-                units_sold = amount_sold
+                units_sold = amount_sold,
+                units_produced = player.quantity,
                 )
 
         
