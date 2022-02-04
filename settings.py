@@ -24,6 +24,13 @@ SESSION_CONFIGS = [
         # Note, from otree-snippets, the source app is called: detect_mobile
         app_sequence=['what_if_calculator'],
     ),
+    dict(
+        name='balanced_treatment_within_subject',
+        display_name='Balanced ordering of within-subject treatments',
+        num_demo_participants=7,
+        # Note, from otree-snippets, the source app is called: detect_mobile
+        app_sequence=['balanced_treatment_within_subject'],
+    ),
         ]
 # SESSION_CONFIGS = [
 #     dict(
@@ -507,4 +514,6 @@ PARTICIPANT_FIELDS = [
     'task_rounds',
     'time_pressure',
     'wait_page_arrival',
+    # For balanced_treatment_within_subject/ app
+    'treatment_sequence',
 ]

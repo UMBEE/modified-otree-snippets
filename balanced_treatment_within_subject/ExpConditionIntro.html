@@ -1,0 +1,12 @@
+
+{{ block title }}
+Intro to Treatment {{ treatment_for_round }}
+{{ endblock }}
+{{ block content }}
+
+<p>
+For the next {{ C.NUM_Repeated_Rounds_Treatment_Condition }} rounds, you are in Treatment {{ treatment_for_round }}
+</p>
+    {{ next_button }}
+
+{{ endblock }}

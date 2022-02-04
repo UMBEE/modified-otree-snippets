@@ -1,0 +1,64 @@
+{{ block title }}
+    Welcome page
+{{ endblock }}
+{{ block content }}
+<p>
+In this experiment, the subject will be exposed to {{ num_of_treatments }}
+treatment conditions. For each treatment, the subject will make {{
+num_of_repeats }} consecutive, decisions one after another.
+<br>
+</p>
+
+<p>
+Technically, this app will repeat for {{ total_rounds }} rounds.
+Assuming the subject is assigned to treatment ordering 1-2-3, then, the subject
+will be prompted with the following sequence of pages:
+</p>
+<ul>
+<li>Welcome page</li>
+<li>Intro page for Treatment 1<ul>
+<li>Page for Round 1</li>
+<li>Page for Round 2</li>
+<li>Page for Round 3</li>
+<li>Page for Round 4</li>
+<li>Page for Round 5</li>
+<li>Page for Round 6</li>
+<li>Page for Round 7</li>
+<li>Page for Round 8</li>
+<li>Page for Round 9</li>
+<li>Page for Round 10</li>
+</ul>
+</li>
+<li>Intro page for Treatment 2<ul>
+<li>Page for Round 1</li>
+<li>Page for Round 2</li>
+<li>Page for Round 3</li>
+<li>Page for Round 4</li>
+<li>Page for Round 5</li>
+<li>Page for Round 6</li>
+<li>Page for Round 7</li>
+<li>Page for Round 8</li>
+<li>Page for Round 9</li>
+<li>Page for Round 10</li>
+</ul>
+</li>
+<li>Intro page for Treatment 3<ul>
+<li>Page for Round 1</li>
+<li>Page for Round 2</li>
+<li>Page for Round 3</li>
+<li>Page for Round 4</li>
+<li>Page for Round 5</li>
+<li>Page for Round 6</li>
+<li>Page for Round 7</li>
+<li>Page for Round 8</li>
+<li>Page for Round 9</li>
+<li>Page for Round 10</li>
+</ul>
+</li>
+<li>Result Page</li>
+</ul>
+
+
+    {{ next_button }}
+
+{{ endblock }}
