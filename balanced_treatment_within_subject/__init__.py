@@ -43,11 +43,10 @@ class C(BaseConstants):
     ROUNDS_for_T3 = FULL_list_of_rounds[ROUNDS_for_TreatmentIntro[2] : ROUNDS_for_TreatmentIntro[2] + NUM_Repeated_Rounds_Treatment_Condition]
     ROUND_for_FinishPage = NUM_ROUNDS
     # Parameters of the simple demand function
-
-    print(ROUNDS_for_TreatmentIntro)
-    print(ROUNDS_for_T1)
-    print(ROUNDS_for_T2)
-    print(ROUNDS_for_T3)
+    # print(ROUNDS_for_TreatmentIntro)
+    # print(ROUNDS_for_T1)
+    # print(ROUNDS_for_T2)
+    # print(ROUNDS_for_T3)
 
 class Subsession(BaseSubsession):
     pass
