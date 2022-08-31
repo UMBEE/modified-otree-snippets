@@ -1,4 +1,5 @@
 from otree.api import *
+from PlayerImport.intro_player import Player
 
 
 doc = """
@@ -17,10 +18,6 @@ class Subsession(BaseSubsession):
 
 
 class Group(BaseGroup):
-    pass
-
-
-class Player(BasePlayer):
     pass
 
 

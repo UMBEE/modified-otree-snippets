@@ -11,6 +11,11 @@ SESSION_CONFIG_DEFAULTS = dict(
 
 SESSION_CONFIGS = [
     dict(
+        name='Sample_Import_App',
+        app_sequence=['PlayerImport'],
+        num_demo_participants=1
+    ),
+    dict(
         name='detect_window',
         display_name='Detect and track window dimension for browser client',
         num_demo_participants=1,
