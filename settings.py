@@ -12,7 +12,7 @@ SESSION_CONFIG_DEFAULTS = dict(
 SESSION_CONFIGS = [
     dict(
         name='Sample_Import_App',
-        app_sequence=['PlayerImport'],
+        app_sequence=['PageImport'],
         num_demo_participants=1
     ),
     dict(

@@ -1,6 +1,9 @@
 from otree.api import *
 
 
+from PageImport.Page1 import *
+
+
 doc = """
 Your app description
 """
@@ -17,10 +20,6 @@ class Subsession(BaseSubsession):
 
 
 class Group(BaseGroup):
-    pass
-
-
-class Player(BasePlayer):
     pass
 
 
