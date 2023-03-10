@@ -11,6 +11,12 @@ SESSION_CONFIG_DEFAULTS = dict(
 
 SESSION_CONFIGS = [
     dict(
+        name='AssignRole',
+        display_name="Test assign something to p.role",
+        app_sequence=['AssignRole'],
+        num_demo_participants=16,
+    ),
+    dict(
         name='detect_window',
         display_name='Detect and track window dimension for browser client',
         num_demo_participants=1,

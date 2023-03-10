@@ -1,0 +1,22 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+A_ROLE	__init__.py	/^    A_ROLE = "A"$/;"	v	class:C
+B_ROLE	__init__.py	/^    B_ROLE = "B"$/;"	v	class:C
+C	__init__.py	/^class C(BaseConstants):$/;"	c
+Group	__init__.py	/^class Group(BaseGroup):$/;"	c
+MyPage	__init__.py	/^class MyPage(Page):$/;"	c
+NAME_IN_URL	__init__.py	/^    NAME_IN_URL = 'AssignRole'$/;"	v	class:C
+NUM_ROUNDS	__init__.py	/^    NUM_ROUNDS = 1$/;"	v	class:C
+PLAYERS_PER_GROUP	__init__.py	/^    PLAYERS_PER_GROUP = 8$/;"	v	class:C
+Player	__init__.py	/^class Player(BasePlayer):$/;"	c
+Results	__init__.py	/^class Results(Page):$/;"	c
+ResultsWaitPage	__init__.py	/^class ResultsWaitPage(WaitPage):$/;"	c
+Subsession	__init__.py	/^class Subsession(BaseSubsession):$/;"	c
+creating_session	__init__.py	/^def creating_session(subsession):$/;"	f
+form_fields	__init__.py	/^    form_fields = ['role']$/;"	v	class:MyPage
+form_model	__init__.py	/^    form_model = 'player'$/;"	v	class:MyPage
+page_sequence	__init__.py	/^page_sequence = [MyPage, ResultsWaitPage, Results]$/;"	v

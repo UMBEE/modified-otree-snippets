@@ -1,0 +1,186 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ADMIN_PASSWORD	settings.py	/^ADMIN_PASSWORD = environ.get('OTREE_ADMIN_PASSWORD')$/;"	v
+ADMIN_USERNAME	settings.py	/^ADMIN_USERNAME = 'admin'$/;"	v
+APR	what_if_calculator_demo/__init__.py	/^    APR = 0.07$/;"	v	class:C
+A_ROLE	AssignRole/__init__.py	/^    A_ROLE = "A"$/;"	v	class:C
+B_ROLE	AssignRole/__init__.py	/^    B_ROLE = "B"$/;"	v	class:C
+C	AssignRole/__init__.py	/^class C(BaseConstants):$/;"	c
+C	balanced_treatment_within_subject/__init__.py	/^class C(BaseConstants):$/;"	c
+C	detect_window/__init__.py	/^class C(BaseConstants):$/;"	c
+C	what_if_calculator/__init__.py	/^class C(BaseConstants):$/;"	c
+C	what_if_calculator_demo/__init__.py	/^class C(BaseConstants):$/;"	c
+COST_PER_UNIT	what_if_calculator/__init__.py	/^    COST_PER_UNIT = 5$/;"	v	class:C
+Constants	slider_calculator_w_EntryExit/__init__.py	/^class Constants(BaseConstants):$/;"	c
+EXP_DemandFunction	what_if_calculator/__init__.py	/^class EXP_DemandFunction:$/;"	c
+EXP_DemandFunction	what_if_calculator_demo/__init__.py	/^class EXP_DemandFunction:$/;"	c
+ExpConditionIntro	balanced_treatment_within_subject/__init__.py	/^class ExpConditionIntro(Page):$/;"	c
+FULL_list_of_rounds	balanced_treatment_within_subject/__init__.py	/^    FULL_list_of_rounds = list(range(1,NUM_ROUNDS + 1))$/;"	v	class:C
+Group	AssignRole/__init__.py	/^class Group(BaseGroup):$/;"	c
+Group	balanced_treatment_within_subject/__init__.py	/^class Group(BaseGroup):$/;"	c
+Group	detect_window/__init__.py	/^class Group(BaseGroup):$/;"	c
+Group	slider_calculator_w_EntryExit/__init__.py	/^class Group(BaseGroup):$/;"	c
+Group	what_if_calculator/__init__.py	/^class Group(BaseGroup):$/;"	c
+Group	what_if_calculator_demo/__init__.py	/^class Group(BaseGroup):$/;"	c
+HIGH_DEMAND_MAX	what_if_calculator/__init__.py	/^    HIGH_DEMAND_MAX = 100$/;"	v	class:C
+HIGH_DEMAND_PRICE_COEF	what_if_calculator/__init__.py	/^    HIGH_DEMAND_PRICE_COEF = -1$/;"	v	class:C
+LANGUAGE_CODE	settings.py	/^LANGUAGE_CODE = 'en'$/;"	v
+LOW_DEMAND_MAX	what_if_calculator/__init__.py	/^    LOW_DEMAND_MAX  = 50$/;"	v	class:C
+LOW_DEMAND_PRICE_COEF	what_if_calculator/__init__.py	/^    LOW_DEMAND_PRICE_COEF = -2$/;"	v	class:C
+MobileCheck	detect_window/__init__.py	/^class MobileCheck(Page):$/;"	c
+MyPage	AssignRole/__init__.py	/^class MyPage(Page):$/;"	c
+MyPage	slider_calculator_w_EntryExit/__init__.py	/^class MyPage(Page):$/;"	c
+MyPage	what_if_calculator/__init__.py	/^class MyPage(Page):$/;"	c
+MyPage	what_if_calculator_demo/__init__.py	/^class MyPage(Page):$/;"	c
+NAME_IN_URL	AssignRole/__init__.py	/^    NAME_IN_URL = 'AssignRole'$/;"	v	class:C
+NAME_IN_URL	balanced_treatment_within_subject/__init__.py	/^    NAME_IN_URL = 'balanced_treatment_within_subject'$/;"	v	class:C
+NAME_IN_URL	detect_window/__init__.py	/^    NAME_IN_URL = 'detect_mobile'$/;"	v	class:C
+NAME_IN_URL	what_if_calculator/__init__.py	/^    NAME_IN_URL = 'input_calculation'$/;"	v	class:C
+NAME_IN_URL	what_if_calculator_demo/__init__.py	/^    NAME_IN_URL = 'input_calculation'$/;"	v	class:C
+NUM_FinishPage	balanced_treatment_within_subject/__init__.py	/^    NUM_FinishPage = 1$/;"	v	class:C
+NUM_LeaderPage	balanced_treatment_within_subject/__init__.py	/^    NUM_LeaderPage = 1$/;"	v	class:C
+NUM_ROUNDS	AssignRole/__init__.py	/^    NUM_ROUNDS = 1$/;"	v	class:C
+NUM_ROUNDS	balanced_treatment_within_subject/__init__.py	/^    NUM_ROUNDS = ($/;"	v	class:C
+NUM_ROUNDS	detect_window/__init__.py	/^    NUM_ROUNDS = 1$/;"	v	class:C
+NUM_ROUNDS	what_if_calculator/__init__.py	/^    NUM_ROUNDS = 1$/;"	v	class:C
+NUM_ROUNDS	what_if_calculator_demo/__init__.py	/^    NUM_ROUNDS = 1$/;"	v	class:C
+NUM_Repeated_Rounds_Treatment_Condition	balanced_treatment_within_subject/__init__.py	/^    NUM_Repeated_Rounds_Treatment_Condition = 10$/;"	v	class:C
+NUM_Treatment_Conditions	balanced_treatment_within_subject/__init__.py	/^    NUM_Treatment_Conditions = 3$/;"	v	class:C
+PARTICIPANT_FIELDS	settings.py	/^PARTICIPANT_FIELDS = [$/;"	v
+PLAYERS_PER_GROUP	AssignRole/__init__.py	/^    PLAYERS_PER_GROUP = 8$/;"	v	class:C
+PLAYERS_PER_GROUP	balanced_treatment_within_subject/__init__.py	/^    PLAYERS_PER_GROUP = None$/;"	v	class:C
+PLAYERS_PER_GROUP	detect_window/__init__.py	/^    PLAYERS_PER_GROUP = None$/;"	v	class:C
+PLAYERS_PER_GROUP	what_if_calculator/__init__.py	/^    PLAYERS_PER_GROUP = None$/;"	v	class:C
+PLAYERS_PER_GROUP	what_if_calculator_demo/__init__.py	/^    PLAYERS_PER_GROUP = None$/;"	v	class:C
+PQDecision	what_if_calculator_demo/__init__.py	/^class PQDecision(ExtraModel):$/;"	c
+Player	AssignRole/__init__.py	/^class Player(BasePlayer):$/;"	c
+Player	balanced_treatment_within_subject/__init__.py	/^class Player(BasePlayer):$/;"	c
+Player	detect_window/__init__.py	/^class Player(BasePlayer):$/;"	c
+Player	slider_calculator_w_EntryExit/__init__.py	/^class Player(BasePlayer):$/;"	c
+Player	what_if_calculator/__init__.py	/^class Player(BasePlayer):$/;"	c
+Player	what_if_calculator_demo/__init__.py	/^class Player(BasePlayer):$/;"	c
+REAL_WORLD_CURRENCY_CODE	settings.py	/^REAL_WORLD_CURRENCY_CODE = 'USD'$/;"	v
+ROOMS	settings.py	/^ROOMS = []$/;"	v
+ROUNDS_for_T1	balanced_treatment_within_subject/__init__.py	/^    ROUNDS_for_T1 = FULL_list_of_rounds[ROUNDS_for_TreatmentIntro[0] : ROUNDS_for_TreatmentIntro[0] + NUM_Repeated_Rounds_Treatment_Condition]$/;"	v	class:C
+ROUNDS_for_T2	balanced_treatment_within_subject/__init__.py	/^    ROUNDS_for_T2 = FULL_list_of_rounds[ROUNDS_for_TreatmentIntro[1] : ROUNDS_for_TreatmentIntro[1] + NUM_Repeated_Rounds_Treatment_Condition]$/;"	v	class:C
+ROUNDS_for_T3	balanced_treatment_within_subject/__init__.py	/^    ROUNDS_for_T3 = FULL_list_of_rounds[ROUNDS_for_TreatmentIntro[2] : ROUNDS_for_TreatmentIntro[2] + NUM_Repeated_Rounds_Treatment_Condition]$/;"	v	class:C
+ROUNDS_for_TreatmentIntro	balanced_treatment_within_subject/__init__.py	/^    ROUNDS_for_TreatmentIntro = [$/;"	v	class:C
+ROUND_for_FinishPage	balanced_treatment_within_subject/__init__.py	/^    ROUND_for_FinishPage = NUM_ROUNDS$/;"	v	class:C
+Results	AssignRole/__init__.py	/^class Results(Page):$/;"	c
+Results	balanced_treatment_within_subject/__init__.py	/^class Results(Page):$/;"	c
+Results	slider_calculator_w_EntryExit/__init__.py	/^class Results(Page):$/;"	c
+ResultsWaitPage	AssignRole/__init__.py	/^class ResultsWaitPage(WaitPage):$/;"	c
+ResultsWaitPage	slider_calculator_w_EntryExit/__init__.py	/^class ResultsWaitPage(WaitPage):$/;"	c
+SECRET_KEY	settings.py	/^SECRET_KEY = 'fnv*lfr%ghepfge1rg1a56t0sj+9d*p&1+&g%q@j!ju@zu^v@6'$/;"	v
+SESSION_CONFIGS	settings.py	/^SESSION_CONFIGS = [$/;"	v
+SESSION_CONFIG_DEFAULTS	settings.py	/^SESSION_CONFIG_DEFAULTS = dict($/;"	v
+SESSION_FIELDS	settings.py	/^SESSION_FIELDS = [$/;"	v
+Subsession	AssignRole/__init__.py	/^class Subsession(BaseSubsession):$/;"	c
+Subsession	balanced_treatment_within_subject/__init__.py	/^class Subsession(BaseSubsession):$/;"	c
+Subsession	detect_window/__init__.py	/^class Subsession(BaseSubsession):$/;"	c
+Subsession	slider_calculator_w_EntryExit/__init__.py	/^class Subsession(BaseSubsession):$/;"	c
+Subsession	what_if_calculator/__init__.py	/^class Subsession(BaseSubsession):$/;"	c
+Subsession	what_if_calculator_demo/__init__.py	/^class Subsession(BaseSubsession):$/;"	c
+Task	detect_window/__init__.py	/^class Task(Page):$/;"	c
+USE_POINTS	settings.py	/^USE_POINTS = True$/;"	v
+UserAgent_raw_str	detect_window/MobileCheck.html	/^    function UserAgent_raw_str() {$/;"	f
+WelcomePage	balanced_treatment_within_subject/__init__.py	/^class WelcomePage(Page):$/;"	c
+WindowSizeH	detect_window/MobileCheck.html	/^    function WindowSizeH() {$/;"	f
+WindowSizeW	detect_window/MobileCheck.html	/^    function WindowSizeW() {$/;"	f
+WorkerPage	balanced_treatment_within_subject/__init__.py	/^class WorkerPage(Page):$/;"	c
+amount	what_if_calculator_demo/__init__.py	/^    amount = models.CurrencyField(min=0, max=100000)$/;"	v	class:Player
+app_sequence	settings.py	/^        app_sequence=['AssignRole'],$/;"	v
+app_sequence	settings.py	/^        app_sequence=['balanced_treatment_within_subject'],$/;"	v
+app_sequence	settings.py	/^        app_sequence=['detect_window'],$/;"	v
+app_sequence	settings.py	/^        app_sequence=['what_if_calculator'],$/;"	v
+before_next_page	balanced_treatment_within_subject/__init__.py	/^    def before_next_page(player : Player, timeout_happened):$/;"	m	class:WelcomePage
+before_next_page	what_if_calculator/__init__.py	/^    def before_next_page(player):$/;"	m	class:MyPage
+calc_high_demand_profit	what_if_calculator/__init__.py	/^def calc_high_demand_profit(player:Player):$/;"	f
+calc_low_demand_profit	what_if_calculator/__init__.py	/^def calc_low_demand_profit(player:Player):$/;"	f
+calc_player_profit	what_if_calculator/__init__.py	/^def calc_player_profit(player:Player): $/;"	f
+calculate_profit	what_if_calculator/__init__.py	/^def calculate_profit(price, cost, units_sold, units_produced):$/;"	f
+calculator_log	what_if_calculator/__init__.py	/^    calculator_log = models.StringField()$/;"	v	class:Player
+check_if_high_demand_status	what_if_calculator/__init__.py	/^def check_if_high_demand_status(player:Player):$/;"	f
+color	what_if_calculator_demo/__init__.py	/^    color = models.StringField()$/;"	v	class:PQDecision
+creating_session	AssignRole/__init__.py	/^def creating_session(subsession):$/;"	f
+creating_session	balanced_treatment_within_subject/__init__.py	/^def creating_session(subsession: Subsession):$/;"	f
+creating_session	what_if_calculator/__init__.py	/^def creating_session(subsession: Subsession):$/;"	f
+decoy_text	what_if_calculator_demo/__init__.py	/^    decoy_text = models.StringField()$/;"	v	class:PQDecision
+display_name	settings.py	/^        display_name="Test assign something to p.role",$/;"	v
+display_name	settings.py	/^        display_name='Balanced ordering of within-subject treatments',$/;"	v
+display_name	settings.py	/^        display_name='Calculate payoff using JavaScript',$/;"	v
+display_name	settings.py	/^        display_name='Detect and track window dimension for browser client',$/;"	v
+error_message	detect_window/__init__.py	/^    def error_message(player: Player, values):$/;"	m	class:MobileCheck
+form_fields	AssignRole/__init__.py	/^    form_fields = ['role']$/;"	v	class:MyPage
+form_fields	detect_window/__init__.py	/^    form_fields = ['is_mobile', 'window_width', 'window_height', 'user_agent_str']$/;"	v	class:MobileCheck
+form_fields	what_if_calculator/__init__.py	/^    form_fields = ['quantity', 'price']$/;"	v	class:MyPage
+form_fields	what_if_calculator_demo/__init__.py	/^    form_fields = ['quantity', 'price', ]$/;"	v	class:MyPage
+form_model	AssignRole/__init__.py	/^    form_model = 'player'$/;"	v	class:MyPage
+form_model	detect_window/__init__.py	/^    form_model = 'player'$/;"	v	class:MobileCheck
+form_model	what_if_calculator/__init__.py	/^    form_model = 'player'$/;"	v	class:MyPage
+form_model	what_if_calculator_demo/__init__.py	/^    form_model = 'player'$/;"	v	class:MyPage
+high_demand	what_if_calculator/__init__.py	/^    def high_demand(price):$/;"	m	class:EXP_DemandFunction
+high_demand	what_if_calculator_demo/__init__.py	/^    def high_demand(price):$/;"	m	class:EXP_DemandFunction
+high_demand_max	what_if_calculator_demo/__init__.py	/^    high_demand_max = 100$/;"	v	class:EXP_DemandFunction
+high_demand_price_coef	what_if_calculator_demo/__init__.py	/^    high_demand_price_coef = -1$/;"	v	class:EXP_DemandFunction
+high_demand_status	what_if_calculator/__init__.py	/^    high_demand_status = models.BooleanField()$/;"	v	class:Player
+image_id	what_if_calculator_demo/__init__.py	/^    image_id = models.IntegerField()$/;"	v	class:PQDecision
+isMobile	detect_window/MobileCheck.html	/^    function isMobile() {$/;"	f
+is_congruent	what_if_calculator_demo/__init__.py	/^    is_congruent = models.BooleanField()$/;"	v	class:PQDecision
+is_correct	what_if_calculator_demo/__init__.py	/^    is_correct = models.BooleanField()$/;"	v	class:PQDecision
+is_displayed	balanced_treatment_within_subject/__init__.py	/^    def is_displayed(player: Player): $/;"	m	class:ExpConditionIntro
+is_displayed	balanced_treatment_within_subject/__init__.py	/^    def is_displayed(player: Player): $/;"	m	class:Results
+is_displayed	balanced_treatment_within_subject/__init__.py	/^    def is_displayed(player: Player): $/;"	m	class:WelcomePage
+is_displayed	balanced_treatment_within_subject/__init__.py	/^    def is_displayed(player: Player): $/;"	m	class:WorkerPage
+is_mobile	detect_window/__init__.py	/^    is_mobile = models.BooleanField()$/;"	v	class:Player
+js_vars	what_if_calculator_demo/__init__.py	/^    def js_vars(player: Player):$/;"	m	class:MyPage
+liveRecv	what_if_calculator/MyPage.html	/^    function liveRecv(data) {$/;"	f
+live_method	what_if_calculator/__init__.py	/^    live_method = live_method$/;"	v	class:MyPage
+live_method	what_if_calculator/__init__.py	/^def live_method(player:Player,data):$/;"	f
+live_method	what_if_calculator_demo/__init__.py	/^def live_method(player: Player, data):$/;"	f
+log_player_attempt	what_if_calculator/__init__.py	/^def log_player_attempt(player:Player):$/;"	f
+low_demand	what_if_calculator/__init__.py	/^    def low_demand(price):$/;"	m	class:EXP_DemandFunction
+low_demand	what_if_calculator_demo/__init__.py	/^    def low_demand(price):$/;"	m	class:EXP_DemandFunction
+low_demand_max	what_if_calculator_demo/__init__.py	/^    low_demand_max  = 100$/;"	v	class:EXP_DemandFunction
+low_demand_price_coef	what_if_calculator_demo/__init__.py	/^    low_demand_price_coef = -2$/;"	v	class:EXP_DemandFunction
+name	settings.py	/^        name='AssignRole',$/;"	v
+name	settings.py	/^        name='balanced_treatment_within_subject',$/;"	v
+name	settings.py	/^        name='detect_window',$/;"	v
+name	settings.py	/^        name='what_if_calc',$/;"	v
+name_in_url	slider_calculator_w_EntryExit/__init__.py	/^    name_in_url = 'slider_calculator_w_EntryExit'$/;"	v	class:Constants
+num_demo_participants	settings.py	/^        num_demo_participants=1,$/;"	v
+num_demo_participants	settings.py	/^        num_demo_participants=16,$/;"	v
+num_demo_participants	settings.py	/^        num_demo_participants=7,$/;"	v
+num_rounds	slider_calculator_w_EntryExit/__init__.py	/^    num_rounds = 1$/;"	v	class:Constants
+num_years	what_if_calculator_demo/__init__.py	/^    num_years = models.IntegerField(min=1, max=50)$/;"	v	class:Player
+page_sequence	AssignRole/__init__.py	/^page_sequence = [MyPage, ResultsWaitPage, Results]$/;"	v
+page_sequence	balanced_treatment_within_subject/__init__.py	/^page_sequence = [WelcomePage, ExpConditionIntro, WorkerPage, Results]$/;"	v
+page_sequence	detect_window/__init__.py	/^page_sequence = [MobileCheck, Task]$/;"	v
+page_sequence	slider_calculator_w_EntryExit/__init__.py	/^page_sequence = [MyPage, ResultsWaitPage, Results]$/;"	v
+page_sequence	what_if_calculator/__init__.py	/^page_sequence = [MyPage]$/;"	v
+page_sequence	what_if_calculator_demo/__init__.py	/^page_sequence = [MyPage]$/;"	v
+persistInput	_static/persist-raw.js	/^function persistInput(inp) {$/;"	f
+player	what_if_calculator_demo/__init__.py	/^    player = models.Link(Player)$/;"	v	class:PQDecision
+players_per_group	slider_calculator_w_EntryExit/__init__.py	/^    players_per_group = None$/;"	v	class:Constants
+price	what_if_calculator/__init__.py	/^    price = models.FloatField(min=0)$/;"	v	class:Player
+price	what_if_calculator_demo/__init__.py	/^    price = models.FloatField(min=0)$/;"	v	class:Player
+profit	what_if_calculator/__init__.py	/^    profit = models.FloatField(min=0)$/;"	v	class:Player
+quantity	what_if_calculator/__init__.py	/^    quantity = models.IntegerField(min=0)$/;"	v	class:Player
+quantity	what_if_calculator_demo/__init__.py	/^    quantity = models.IntegerField(min=0)$/;"	v	class:Player
+random_init_instance	what_if_calculator/__init__.py	/^def random_init_instance(player:Player):$/;"	f
+reaction_ms	what_if_calculator_demo/__init__.py	/^    reaction_ms = models.IntegerField()$/;"	v	class:PQDecision
+recalc	what_if_calculator/MyPage.html	/^    function recalc() {$/;"	f
+recalc	what_if_calculator_demo/MyPage.html	/^    function recalc() {$/;"	f
+treatment_sequence	balanced_treatment_within_subject/__init__.py	/^    treatment_sequence = models.StringField()$/;"	v	class:Player
+user_agent_str	detect_window/__init__.py	/^    user_agent_str = models.StringField()$/;"	v	class:Player
+vars_for_template	balanced_treatment_within_subject/__init__.py	/^    def vars_for_template(player):$/;"	m	class:ExpConditionIntro
+vars_for_template	balanced_treatment_within_subject/__init__.py	/^    def vars_for_template(player):$/;"	m	class:WelcomePage
+vars_for_template	balanced_treatment_within_subject/__init__.py	/^    def vars_for_template(player):$/;"	m	class:WorkerPage
+vars_for_template	what_if_calculator/__init__.py	/^    def vars_for_template(player):$/;"	m	class:MyPage
+window_height	detect_window/__init__.py	/^    window_height = models.IntegerField()$/;"	v	class:Player
+window_width	detect_window/__init__.py	/^    window_width = models.IntegerField()$/;"	v	class:Player
+worker_page_choice	balanced_treatment_within_subject/__init__.py	/^    worker_page_choice = models.BooleanField(initial=0)$/;"	v	class:Player
