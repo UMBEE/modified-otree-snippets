@@ -37,6 +37,13 @@ SESSION_CONFIGS = [
         # Note, from otree-snippets, the source app is called: detect_mobile
         app_sequence=['balanced_treatment_within_subject'],
     ),
+    dict(
+        # Source: https://www.otreehub.com/projects/otree-snippets/
+        name='multi_language',
+        display_name='multi_language: Translate an app to multiple languages (e.g. English and German)',
+        num_demo_participants=1,
+        app_sequence=['multi_language'],
+    ),
         ]
 # SESSION_CONFIGS = [
 #     dict(
